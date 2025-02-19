@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.table-style{
+    padding: 0.75rem;
+    border : 1px solid white;
+}
