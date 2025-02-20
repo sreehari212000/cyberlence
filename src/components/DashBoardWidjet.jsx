@@ -1,0 +1,24 @@
+import React from 'react'
+
+const DashBoardWidget = ({title, name, id, phoneno, email, alternateemail, address, bachelors, discipline, joinDate, feesPayment, lastDate, uploadCertificates, pendingStatus}) => {
+  return (
+    <div className='p-4 flex flex-col gap-2 shadow-md rounded-md  shadow-black'>
+        <h1 className='text-2xl font-medium'>{title}</h1>
+        {name && <p>Name: <span>{name}</span></p>}
+        {id && <p>Id: <span>{id}</span></p> }
+        {email && <p>Email: <span>{email}</span></p>}
+        {phoneno && <p>Phone No: <span>{phoneno}</span></p>}
+        {alternateemail && <p>Alternate Email: <span>{alternateemail}</span></p>}
+        {address && <p>Addresss: <span>{address}</span></p>}
+        {bachelors && <p>Bachelors: <span>{bachelors}</span></p>}
+        {discipline && <p>Discipline: <span>{discipline}</span></p>}
+        {joinDate && <p>Join Date: <span>{joinDate}</span></p>}
+        {feesPayment && <p>Fees Payment: <span>{feesPayment}</span></p>}
+        {lastDate && <p>Last Date: <span>{lastDate}</span></p> }
+        {uploadCertificates && <p>Upload Certificates: <span>{uploadCertificates}</span></p> }
+        {pendingStatus && <p>Pending Status: <span>{pendingStatus}</span></p> }
+    </div>
+  )
+}
+
+export default DashBoardWidget
