@@ -2,7 +2,7 @@ import React from 'react'
 
 const AssignmentTable = ({data}) => {
   return (
-    <table className='border mt-10 w-[60%]'>
+    <table className='border mt-10 w-[60%] bg-gray-900 shadow-md shadow-black'>
         <thead>
             <tr>
                 <th className='table-style'>Course ID</th>
