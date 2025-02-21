@@ -1,14 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DashBoardWidget from './DashBoardWidjet'
+import { widgets } from '../../data';
 
 const DashboardHome = () => {
+    const [activeWidgets, setActiveWidgets] = useState(widgets);
+    
+      const removeWidget = (id) => {        
+        setActiveWidgets(activeWidgets.filter(widget => widget.id !== id));
+      };
+      const addWidget = (widget) => {
+        setActiveWidgets([...activeWidgets, widget]);
+      };
+
   return (
-    <div className='grid grid-cols-3 gap-2 p-2'>
-        <DashBoardWidget title={"Personal Data"} id={"123"} phoneno={233344545} email={"sample@gmail.com"} name={"Sample"}/> 
-        <DashBoardWidget title={"Guardian Data"}  email={"sdsf@gmail.com"} phoneno={24345432} alternateemail={"ssdsds@gddsf.com"} address={"sdsdfsdds dsfdsfsf"}/> 
-        <DashBoardWidget title={"Transfer Data"} />
-        <DashBoardWidget title={"Degree Program"} bachelors={"B-Tech"} discipline={"Comp Science"} joinDate={"12-07-2024"}/>
-        <DashBoardWidget title={"Admin Notification"} feesPayment={"Hostel fee"} lastDate={"23-02-2025"} uploadCertificates={"Completed"} pendingStatus={"Hostel fees"}/>
+    <div className='px-3'>
+        <div className="my-4">
+        {widgets
+          .filter(widget => !activeWidgets.some(active => active.id === widget.id))
+          .map(widget => (
+            <button
+              key={widget.id}
+              onClick={() => addWidget(widget)}
+              className="mr-2 p-2 bg-gray-800 shadow-md text-white rounded-md"
+            >
+              Add {widget.title}
+            </button>
+          ))}
+      </div>
+
+        <div className='grid grid-cols-3 gap-2'>
+            {
+                activeWidgets.map((item)=>(
+                    <DashBoardWidget key={item.id} id={item.id} item={item} title={item.title} address={item?.address} alternateemail={item?.alternateemail} bachelors={item?.bachelors} discipline={item?.discipline} email={item?.email} feesPayment={item?.feesPayment} joinDate={item?.joinDate} lastDate={item?.lastDate} name={item?.name} pendingStatus={item?.pendingStatus} phoneno={item?.phoneno} uploadCertificates={item?.uploadCertificates} removeWidget={removeWidget}/>
+                ))
+            }
+        </div>
+
+        {/* <Sample /> */}
     </div>
   )
 }

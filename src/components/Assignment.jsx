@@ -1,14 +1,7 @@
 import React, { useState } from 'react'
 import Filters from './Filters';
 import AssignmentTable from './AssignmentTable';
-
-const assignmentsData = [
-  {id:1, courseId: "CS101", assignmentId: "A1", title: "React Basics", status: "complete" },
-  {id:2, courseId: "CS101", assignmentId: "A2", title: "Hooks & State", status: "inprogress" },
-  {id:3, courseId: "CS102", assignmentId: "A1", title: "JavaScript Fundamentals", status: "pending" },
-  {id:4, courseId: "CS103", assignmentId: "A3", title: "Algorithms", status: "complete" },
-  {id:5, courseId: "CS104", assignmentId: "A2", title: "Database Design", status: "inprogress" },
-];
+import { assignmentsData } from '../../data';
 
 const Assignment = () => {
     const [assignments, setAssignments] = useState(assignmentsData)

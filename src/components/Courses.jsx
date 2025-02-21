@@ -1,12 +1,7 @@
 import React from 'react'
+import { courses } from '../../data'
 
 const Courses = () => {
-  const courses = [
-    { id: "CS101", name: "Introduction to Programming", credits: 3, grade: "A", points: 4.0 },
-    { id: "CS102", name: "Data Structures", credits: 4, grade: "B+", points: 3.5 },
-    { id: "CS103", name: "Operating Systems", credits: 3, grade: "A-", points: 3.7 },
-    { id: "CS104", name: "Database Management", credits: 3, grade: "B", points: 3.0 },
-  ];
   return (
     <div className='p-10'>
         <h1 className='text-2xl mb-3'>Course Details</h1>
@@ -22,7 +17,7 @@ const Courses = () => {
             </thead>
             <tbody>
             {courses.map((course)=> (
-                <tr className=''>
+                <tr key={course.id} className=''>
                     <td className='table-style'>{course.id}</td>
                     <td className='table-style'>{course.name}</td>
                     <td className='table-style'>{course.credits}</td>
