@@ -5,7 +5,7 @@ const Courses = () => {
   return (
     <div className='p-10'>
         <h1 className='text-2xl mb-3'>Course Details</h1>
-        <table className='bg-gray-900 shadow-black shadow-lg'>
+        <table className='shadow-black shadow-lg bg-white'>
             <thead>
                 <tr className=''>
                     <th className='table-style'>Course ID</th>

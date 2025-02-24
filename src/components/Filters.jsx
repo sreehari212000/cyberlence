@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 
 const Filters = ({assignmentIdFilter, setAssignmentIdFilter, courseIdFilter, setCourseIdFilter, statusFilter, setStatusFilter}) => {
   return (
-    <div>
-        <h1>Filters</h1>
+    <div className=''>
+        <h1 className=''>Filters :</h1>
         <div className='flex gap-5 text-white'>
             <div>
-                <label>
+                <label className='text-black'>
                     Assignment Id :
-                    <select className='p-2 rounded-md' onChange={(e)=>setAssignmentIdFilter(e.target.value)} value={assignmentIdFilter}>
+                    <select className='py-2 px-3 rounded-md text-black' onChange={(e)=>setAssignmentIdFilter(e.target.value)} value={assignmentIdFilter}>
                         <option value="All">All</option>
                         <option value="A1">A1</option>
                         <option value="A2">A2</option>
@@ -18,9 +18,9 @@ const Filters = ({assignmentIdFilter, setAssignmentIdFilter, courseIdFilter, set
             </div>
 
             <div>
-                <label>
+                <label className='text-black'>
                     Course Id :
-                    <select className='p-2 rounded-md' onChange={(e)=>setCourseIdFilter(e.target.value)} value={courseIdFilter}>
+                    <select className='py-2 px-3 text-black rounded-md' onChange={(e)=>setCourseIdFilter(e.target.value)} value={courseIdFilter}>
                         <option value="All">All</option>
                         <option value="CS101">CS101</option>
                         <option value="CS102">CS102</option>
@@ -30,9 +30,9 @@ const Filters = ({assignmentIdFilter, setAssignmentIdFilter, courseIdFilter, set
                 </label>
             </div>
             <div>
-                <label>
+                <label className='text-black'>
                     Status :
-                    <select className='p-2 rounded-md' onChange={e => setStatusFilter(e.target.value)} value={statusFilter}>
+                    <select className='py-2 px-3 text-black rounded-md' onChange={e => setStatusFilter(e.target.value)} value={statusFilter}>
                         <option value="All">All</option>
                         <option value="complete">Completed</option>
                         <option value="pending">Pending</option>

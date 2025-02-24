@@ -5,11 +5,11 @@ import { Outlet } from 'react-router-dom'
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className='border h-full'>
         <Navbar />
-        <div className='grid grid-cols-10'>
+        <div className='flex h-[92%] bg-white'>
             <Sidebar />
-            <div className=' col-span-9'><Outlet /></div>
+            <div className='flex-[7] bg-gray-100'><Outlet /></div>
         </div>
     </div>
   )

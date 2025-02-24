@@ -13,7 +13,7 @@ const DashboardHome = () => {
       };
 
   return (
-    <div className='px-3'>
+    <div className='px-5 rounded-md'>
         <div className="my-4">
         {widgets
           .filter(widget => !activeWidgets.some(active => active.id === widget.id))
