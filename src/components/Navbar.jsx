@@ -18,7 +18,7 @@ const Navbar = () => {
             </div>
             <Dropdown />
         </div>
-        <p className='text-xl px-12 border-b  w-fit'>MyStudentPortal</p>
+        <p className='text-xl px-10 border-b  w-fit'>MyStudentPortal</p>
     </div>
   )
 }
