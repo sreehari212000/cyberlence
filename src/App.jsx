@@ -10,7 +10,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='font-medium text-lg h-screen'>
+    <div className='font-medium  h-screen'>
         <Routes>
             <Route path='/' element={<Navigate to={'/home'}/>}/>
             <Route  path='/home' element={<Dashboard />}>
