@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import DashBoardWidget from './DashBoardWidjet'
+import DashBoardWidget from '../components/DashBoardWidjet'
 import { widgets } from '../../data';
 
 const DashboardHome = () => {
@@ -35,8 +35,6 @@ const DashboardHome = () => {
                 ))
             }
         </div>
-
-        {/* <Sample /> */}
     </div>
   )
 }

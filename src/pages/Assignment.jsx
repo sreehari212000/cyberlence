@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Filters from './Filters';
-import AssignmentTable from './AssignmentTable';
+import Filters from '../components/Filters';
+import AssignmentTable from '../components/AssignmentTable';
 import { assignmentsData } from '../../data';
 
 const Assignment = () => {
